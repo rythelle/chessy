@@ -15,11 +15,11 @@ import BoardGame from './components/BoardGame.vue'
   box-sizing: border-box;
 }
 
-/* .board-game {
+.board-game {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
 </style>

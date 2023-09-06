@@ -1,24 +1,28 @@
 <template>
-  <div :key="key">
-    <img v-if="initialPosition[position]" class="piece-img" :src="initialPosition[position]" />
-    <div v-else></div>
+  <div>
+    <img
+      v-if="initialPosition[props.position]"
+      class="piece-img"
+      :src="initialPosition[props.position]"
+      alt="Not found"
+    />
   </div>
 </template>
 
 <script setup>
-import { reactive, defineProps } from 'vue'
-import RookBlack from './icons/RookBlack.vue'
-import KnightBlack from './icons/KnightBlack.vue'
-import BishopBlack from './icons/BishopBlack.vue'
-import KingBlack from './icons/KingBlack.vue'
-import QueenBlack from './icons/QueenBlack.vue'
-import PawnBlack from './icons/PawnBlack.vue'
-import PawnWhite from './icons/PawnWhite.vue'
-import RookWhite from './icons/RookBlack.vue'
-import KnightWhite from './icons/KnightWhite.vue'
-import BishopWhite from './icons/BishopWhite.vue'
-import KingWhite from './icons/KingWhite.vue'
-import QueenWhite from './icons/QueenWhite.vue'
+import { reactive } from 'vue'
+import RookBlack from '../assets/rook-black.svg'
+import KnightBlack from '../assets/knight-black.svg'
+import BishopBlack from '../assets/bishop-black.svg'
+import KingBlack from '../assets/king-black.svg'
+import QueenBlack from '../assets/queen-black.svg'
+import PawnBlack from '../assets/pawn-black.svg'
+import PawnWhite from '../assets/pawn-white.svg'
+import RookWhite from '../assets/rook-black.svg'
+import KnightWhite from '../assets/knight-white.svg'
+import BishopWhite from '../assets/bishop-white.svg'
+import KingWhite from '../assets/king-white.svg'
+import QueenWhite from '../assets/queen-white.svg'
 
 const initialPosition = reactive({
   0: RookBlack,
@@ -90,14 +94,12 @@ const initialPosition = reactive({
 const props = defineProps({
   position: Number
 })
-
-console.log('123', props.position)
 </script>
 
 <style scoped>
 .piece-img {
   height: 40px;
   width: 40px;
-  margin: 5px;
+  margin: 40px;
 }
 </style>
