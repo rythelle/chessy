@@ -195,8 +195,6 @@ const dragDrop = (event) => {
 
   const taken = event.target.classList.contains('piece')
 
-  console.log('testando', { oi: event })
-
   const valid = checkIfValid(event.target)
 
   const opponentGo = playerGo.value === 'white' ? 'black' : 'white'
@@ -920,7 +918,7 @@ const checkForWin = () => {
   const kings = Array.from(document.querySelectorAll('#king'))
 
   if (!kings.some((king) => king.className.includes('white'))) {
-    warnings.value = 'Jogador preto ganhou'
+    alert('Jogador preto ganhou')
 
     const allSquares = document.querySelectorAll('.square')
 
@@ -930,7 +928,7 @@ const checkForWin = () => {
   }
 
   if (!kings.some((king) => king.className.includes('black'))) {
-    warnings.value = 'Jogador branco ganhou'
+    alert('Jogador branco ganhou')
 
     const allSquares = document.querySelectorAll('.square')
 
