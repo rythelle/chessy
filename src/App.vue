@@ -1,25 +1,27 @@
-<script setup>
-import BoardGame from './components/BoardGame.vue'
-</script>
-
 <template>
-  <div class="board-game">
+  <div class="screen">
     <BoardGame />
   </div>
 </template>
 
-<style scoped>
+<script setup>
+import BoardGame from './components/BoardGame.vue'
+</script>
+
+<style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.board-game {
+.screen {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(117, 117, 117);
 }
 </style>
